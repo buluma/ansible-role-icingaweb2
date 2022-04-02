@@ -39,8 +39,6 @@ jobs:
         config:
           - image: "enterpriselinux"
             tag: "7"
-          - image: "enterpriselinux"
-            tag: "latest"
           - image: "docker-ubuntu-systemd"
             tag: "latest"
           - image: "docker-ubuntu-systemd"
@@ -49,8 +47,6 @@ jobs:
             tag: "focal"
           - image: "debian-systemd"
             tag: "latest"
-          - image: "debian-systemd"
-            tag: "bookworm"
     steps:
       - name: checkout
         uses: actions/checkout@v3
