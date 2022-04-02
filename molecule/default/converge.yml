@@ -1,7 +1,8 @@
 ---
-- name: Converge
+- name: converge
   hosts: all
-  tasks:
-    - name: "Include ansible-icingaweb2"
-      ansible.builtin.include_role:
-        name: "mkayontour.icingaweb2"
+  become: yes
+  gather_facts: yes
+
+  roles:
+    - role: ansible-role-icingaweb2
