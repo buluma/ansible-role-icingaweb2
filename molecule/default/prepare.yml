@@ -2,6 +2,10 @@
 - name: prepare container
   hosts: all
   gather_facts: true
+
+  roles:
+    - role: buluma.bootstrap
+
   tasks:
     - name: apt update
       ansible.builtin.apt:

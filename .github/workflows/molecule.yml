@@ -1,6 +1,7 @@
 ---
 #
 # Ansible managed
+# Inspired by https://github.com/mkayontour/ansible-icingaweb2
 #
 
 name: Ansible Molecule
