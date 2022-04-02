@@ -4,19 +4,20 @@ Installs and configures Icinga Web 2 on Rhel, Debian and Ubuntu
 
 |GitHub|GitLab|Quality|Downloads|Version|Issues|Pull Requests|
 |------|------|-------|---------|-------|------|-------------|
-|[![github](https://github.com/buluma/ansible-role-icingaweb2/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-icingaweb2/actions)|[![gitlab](https://gitlab.com/buluma/ansible-role-icingaweb2/badges/master/pipeline.svg)](https://gitlab.com/buluma/ansible-role-icingaweb2)|[![quality](https://img.shields.io/ansible/quality/)](https://galaxy.ansible.com/buluma/icingaweb2)|[![downloads](https://img.shields.io/ansible/role/d/)](https://galaxy.ansible.com/buluma/icingaweb2)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-icingaweb2.svg)](https://github.com/buluma/ansible-role-icingaweb2/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-icingaweb2.svg)](https://github.com/buluma/ansible-role-icingaweb2/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-icingaweb2.svg)](https://github.com/buluma/ansible-role-icingaweb2/pulls/)|
+|[![github](https://github.com/buluma/ansible-role-icingaweb2/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-icingaweb2/actions)|[![gitlab](https://gitlab.com/buluma/ansible-role-icingaweb2/badges/master/pipeline.svg)](https://gitlab.com/buluma/ansible-role-icingaweb2)|[![quality](https://img.shields.io/ansible/quality/58626)](https://galaxy.ansible.com/buluma/icingaweb2)|[![downloads](https://img.shields.io/ansible/role/d/58626)](https://galaxy.ansible.com/buluma/icingaweb2)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-icingaweb2.svg)](https://github.com/buluma/ansible-role-icingaweb2/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-icingaweb2.svg)](https://github.com/buluma/ansible-role-icingaweb2/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-icingaweb2.svg)](https://github.com/buluma/ansible-role-icingaweb2/pulls/)|
 
 ## [Example Playbook](#example-playbook)
 
 This example is taken from `molecule/default/converge.yml` and is tested on each push, pull request and release.
 ```yaml
 ---
-- name: Converge
+- name: converge
   hosts: all
-  tasks:
-    - name: "Include ansible-icingaweb2"
-      ansible.builtin.include_role:
-        name: "mkayontour.icingaweb2"
+  become: yes
+  gather_facts: yes
+
+  roles:
+    - role: buluma.icingaweb2
 ```
 
 The machine needs to be prepared. In CI this is done using `molecule/default/prepare.yml`:
@@ -25,6 +26,11 @@ The machine needs to be prepared. In CI this is done using `molecule/default/pre
 - name: prepare container
   hosts: all
   gather_facts: true
+
+  roles:
+    - role: buluma.bootstrap
+    - role: buluma.ca_certificates
+
   tasks:
     - name: apt update
       ansible.builtin.apt:
@@ -142,6 +148,14 @@ icingaweb2_modules:
 
 - pip packages listed in [requirements.txt](https://github.com/buluma/ansible-role-icingaweb2/blob/main/requirements.txt).
 
+## [Status of used roles](#status-of-requirements)
+
+The following roles are used to prepare a system. You can prepare your system in another way.
+
+| Requirement | GitHub | GitLab |
+|-------------|--------|--------|
+|[buluma.bootstrap](https://galaxy.ansible.com/buluma/bootstrap)|[![Build Status GitHub](https://github.com/buluma/ansible-role-bootstrap/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-bootstrap/actions)|[![Build Status GitLab ](https://gitlab.com/buluma/ansible-role-bootstrap/badges/main/pipeline.svg)](https://gitlab.com/buluma/ansible-role-bootstrap)|
+|[buluma.ca_certificates](https://galaxy.ansible.com/buluma/ca_certificates)|[![Build Status GitHub](https://github.com/buluma/ansible-role-ca_certificates/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-ca_certificates/actions)|[![Build Status GitLab ](https://gitlab.com/buluma/ansible-role-ca_certificates/badges/master/pipeline.svg)](https://gitlab.com/buluma/ansible-role-ca_certificates)|
 
 ## [Context](#context)
 
