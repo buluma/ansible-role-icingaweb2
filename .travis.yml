@@ -1,35 +1,29 @@
 ---
+#
+# Ansible managed
+#
 language: python
-services: docker
 
-branches:
-  except:
-    - /^feature.*/
+os: linux
+dist: xenial
 
-env:
-  global:
-    - ROLE_NAME: icingaweb2
-  matrix:
-    - MOLECULE_DISTRO: "centos7"
-    - MOLECULE_DISTRO: "centos6"
-    - MOLECULE_DISTRO: "ubuntu1604"
-    - MOLECULE_DISTRO: "ubuntu1804"
-    - MOLECULE_DISTRO: "debian9"
-    - MOLECULE_DISTRO: "debian10"
+python:
+  - "3.9"
+
+services:
+  - docker
+
+cache:
+  - pip
 
 install:
-  # Install test dependencies.
-  - pip install molecule yamllint ansible-lint docker
-
-before_script:
-  # Use actual Ansible Galaxy role name for the project directory.
-  - cd ../
-  - mv ansible-$ROLE_NAME mkayontour.$ROLE_NAME
-  - cd mkayontour.$ROLE_NAME
+  - pip install --upgrade pip
+  - pip install ansible ansible-lint yamllint
 
 script:
-  # Run tests.
-  - molecule test
+  - yamllint .
+  - ansible-lint
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
+  email: false

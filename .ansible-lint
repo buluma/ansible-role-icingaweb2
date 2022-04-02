@@ -1,0 +1,7 @@
+---
+#
+# Ansible managed
+#
+  - ./molecule/default/collections.yml
+  - ./.tox
+  - ./.cache
