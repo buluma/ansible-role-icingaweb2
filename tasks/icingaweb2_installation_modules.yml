@@ -1,3 +1,4 @@
+---
 - name: install icingaweb2 modules
   become: yes
   ansible.builtin.git:
