@@ -30,8 +30,6 @@ molecule:
         tag: "focal"
       - image: "debian-systemd"
         tag: "latest"
-      - image: "debian-systemd"
-        tag: "bookworm"
 
 testing:
   stage: test
