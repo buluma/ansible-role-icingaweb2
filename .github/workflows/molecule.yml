@@ -1,7 +1,6 @@
 ---
 #
 # Ansible managed
-# Inspired by https://github.com/mkayontour/ansible-icingaweb2
 #
 
 name: Ansible Molecule
@@ -11,7 +10,7 @@ on:
   schedule:
     - cron: '17 9 * * *'
   workflow_dispatch:
-  push: {branches: ["master", "main", "testing"]}
+  push: {branches: ["master", "main"]}
 
 concurrency:
   group: ${{ github.ref }}-${{ github.workflow }}
@@ -39,14 +38,20 @@ jobs:
         config:
           - image: "enterpriselinux"
             tag: "7"
+          - image: "enterpriselinux"
+            tag: "latest"
           - image: "docker-ubuntu-systemd"
             tag: "latest"
           - image: "docker-ubuntu-systemd"
             tag: "bionic"
           - image: "docker-ubuntu-systemd"
             tag: "focal"
+          - image: "docker-ubuntu-systemd"
+            tag: "jammy"
           - image: "debian-systemd"
             tag: "latest"
+          - image: "debian-systemd"
+            tag: "bookworm"
     steps:
       - name: checkout
         uses: actions/checkout@v3
