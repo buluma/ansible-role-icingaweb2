@@ -1,0 +1,11 @@
+digraph PhiloDilemma {
+  label = "Michael Buluma" ;
+  overlap=false
+  {
+    "icingaweb2" [fillcolor=yellow style=filled penwidth=3]
+    "buluma.bootstrap" [fillcolor=green style=filled]
+    "buluma.ca_certificates" [fillcolor=green style=filled]
+  }
+  "icingaweb2" -> "buluma.bootstrap"
+  "icingaweb2" -> "buluma.ca_certificates"
+}
