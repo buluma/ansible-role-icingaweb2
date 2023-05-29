@@ -1,5 +1,5 @@
 ---
-- name: create icingaweb2 config files
+- name: Create icingaweb2 config files
   become: yes
   ansible.builtin.template:
     src: "{{ item }}.j2"
@@ -13,7 +13,7 @@
     - authentication.ini
     - groups.ini
 
-- name: manage icingaweb2 roles.ini
+- name: Manage icingaweb2 roles.ini
   become: yes
   ansible.builtin.template:
     src: roles.ini.j2

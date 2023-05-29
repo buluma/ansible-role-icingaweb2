@@ -1,5 +1,5 @@
 ---
-- name: add icingadirector service user
+- name: Add icingadirector service user
   ansible.builtin.user:
     name: icingadirector
     state: present
@@ -9,7 +9,7 @@
     system: yes
     create_home: yes
 
-- name: create icinga-director service
+- name: Create icinga-director service
   ansible.builtin.copy:
     dest: /etc/systemd/system
     src: "{{ icingaweb2_modules_path }}/director/contrib/systemd/icinga-director.service"

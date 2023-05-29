@@ -1,5 +1,5 @@
 ---
-- name: create director directory
+- name: Create director directory
   ansible.builtin.file:
     state: directory
     dest: "{{ icingaweb2_modules_config }}/director"
@@ -10,7 +10,7 @@
     - config
     - install
 
-- name: create director config
+- name: Create director config
   ansible.builtin.copy:
     dest: "{{ icingaweb2_modules_config }}/director/config.ini"
     owner: "{{ icingaweb2_httpd_user }}"
@@ -23,7 +23,7 @@
     - config
     - install
 
-- name: create director kickstart config
+- name: Create director kickstart config
   ansible.builtin.copy:
     dest: "{{ icingaweb2_modules_config }}/director/kickstart.ini"
     owner: "{{ icingaweb2_httpd_user }}"
@@ -41,7 +41,7 @@
     - config
     - install
 
-- name: check if migration is pending
+- name: Check if migration is pending
   ansible.builtin.command: /usr/bin/icingacli director migration pending --verbose
   register: pending
   changed_when: pending.rc == 0
@@ -50,7 +50,7 @@
     - config
     - install
 
-- name: run migration
+- name: Run migration
   ansible.builtin.command: /usr/bin/icingacli director migration run --verbose
   when:
     - pending.rc == 0
@@ -59,7 +59,7 @@
     - config
     - install
 
-- name: check if kickstart is required
+- name: Check if kickstart is required
   ansible.builtin.command: /usr/bin/icingacli director kickstart required --verbose || /bin/true
   register: kickstart
   changed_when: "'Kickstart has been configured and should be triggered' in kickstart.stdout"

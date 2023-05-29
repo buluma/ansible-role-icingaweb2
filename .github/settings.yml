@@ -5,4 +5,4 @@
 repository:
   description: Installs and configures Icinga Web 2 on Rhel, Debian and Ubuntu
   homepage: https://buluma.github.io/
-  topics: icinga2, monitoring, webinterface, icingaweb2, rhel, debian, ubuntu, centos, ansible, molecule, tox, playbook, hacktoberfest
+  topics: icinga2, monitoring, webinterface, icingaweb2, rhel, debian, ubuntu, centos, ansible, molecule, tox, playbook

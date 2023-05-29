@@ -1,5 +1,5 @@
 ---
-- name: install icingaweb2 modules
+- name: Install icingaweb2 modules
   become: yes
   ansible.builtin.git:
     repo: "{{ item.git_url }}"
@@ -9,7 +9,7 @@
   loop: "{{ icingaweb2_modules }}"
 
 
-- name: activate installed modules
+- name: Activate installed modules
   become: yes
   ansible.builtin.command:
     cmd: "/usr/bin/icingacli module enable {{ item.name }}"
@@ -17,7 +17,7 @@
       "{{ icingaweb2_config_dir }}/enabledModules/{{ item.name }}"
   loop: "{{ icingaweb2_modules }}"
 
-- name: ensure directory module monitoring exists
+- name: Ensure directory module monitoring exists
   become: yes
   ansible.builtin.file:
     state: directory
@@ -26,7 +26,7 @@
     group: "{{ icingaweb2_group }}"
     mode: "2770"
 
-- name: manage module monitoring configuration
+- name: Manage module monitoring configuration
   become: yes
   ansible.builtin.template:
     src: "monitoring_{{ item }}.ini.j2"
