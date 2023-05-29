@@ -38,4 +38,4 @@
         password: icingaweb
         use_ssl: 0
   roles:
-    - ansible-icingaweb2
+    - ansible-role-icingaweb2
