@@ -2,9 +2,9 @@
 
 Installs and configures Icinga Web 2 on Rhel, Debian and Ubuntu
 
-|GitHub|GitLab|Quality|Downloads|Version|Issues|Pull Requests|
-|------|------|-------|---------|-------|------|-------------|
-|[![github](https://github.com/buluma/ansible-role-icingaweb2/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-icingaweb2/actions)|[![gitlab](https://gitlab.com/shadowwalker/ansible-role-icingaweb2/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-icingaweb2)|[![quality](https://img.shields.io/ansible/quality/58626)](https://galaxy.ansible.com/buluma/icingaweb2)|[![downloads](https://img.shields.io/ansible/role/d/58626)](https://galaxy.ansible.com/buluma/icingaweb2)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-icingaweb2.svg)](https://github.com/buluma/ansible-role-icingaweb2/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-icingaweb2.svg)](https://github.com/buluma/ansible-role-icingaweb2/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-icingaweb2.svg)](https://github.com/buluma/ansible-role-icingaweb2/pulls/)|
+|GitHub|GitLab|Downloads|Version|Issues|Pull Requests|
+|------|------|-------|-------|------|-------------|
+|[![github](https://github.com/buluma/ansible-role-icingaweb2/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-icingaweb2/actions)|[![gitlab](https://gitlab.com/shadowwalker/ansible-role-icingaweb2/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-icingaweb2)|[![downloads](https://img.shields.io/ansible/role/d/4734)](https://galaxy.ansible.com/buluma/icingaweb2)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-icingaweb2.svg)](https://github.com/buluma/ansible-role-icingaweb2/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-icingaweb2.svg)](https://github.com/buluma/ansible-role-icingaweb2/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-icingaweb2.svg)](https://github.com/buluma/ansible-role-icingaweb2/pulls/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -179,7 +179,7 @@ This role has been tested on these [container images](https://hub.docker.com/u/b
 |[Ubuntu](https://hub.docker.com/repository/docker/buluma/ubuntu/general)|all|
 |[Debian](https://hub.docker.com/repository/docker/buluma/debian/general)|all|
 
-The minimum version of Ansible required is 2.10, tests have been done to:
+The minimum version of Ansible required is 2.12, tests have been done to:
 
 - The previous version.
 - The current version.
