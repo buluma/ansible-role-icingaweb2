@@ -1,5 +1,14 @@
 # Changelog
 
+## [Unreleased](https://github.com/buluma/ansible-role-icingaweb2/tree/HEAD)
+
+[Full Changelog](https://github.com/buluma/ansible-role-icingaweb2/compare/v0.1.2...HEAD)
+
+**Closed issues:**
+
+- Update buluma/todo-to-issue-action@v1.0.1 @buluma [\#9](https://github.com/buluma/ansible-role-icingaweb2/issues/9)
+- Update action [\#8](https://github.com/buluma/ansible-role-icingaweb2/issues/8)
+
 ## [v0.1.2](https://github.com/buluma/ansible-role-icingaweb2/tree/v0.1.2) (2022-08-08)
 
 [Full Changelog](https://github.com/buluma/ansible-role-icingaweb2/compare/v0.1.1...v0.1.2)
