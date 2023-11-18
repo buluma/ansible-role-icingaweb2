@@ -1,4 +1,4 @@
-# [icingaweb2](#icingaweb2)
+# [Ansible role icingaweb2](#icingaweb2)
 
 Installs and configures Icinga Web 2 on Rhel, Debian and Ubuntu
 
