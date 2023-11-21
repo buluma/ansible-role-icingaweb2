@@ -24,8 +24,6 @@ molecule:
         tag: "focal"
       - image: "docker-ubuntu-systemd"
         tag: "bionic"
-      - image: "docker-ubuntu-systemd"
-        tag: "lunar"
       - image: "debian-systemd"
         tag: "latest"
       - image: "debian-systemd"
