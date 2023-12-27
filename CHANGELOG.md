@@ -6,6 +6,7 @@
 
 **Closed issues:**
 
+- Update buluma/todo-to-issue-action@v1.0.1 @buluma [\#12](https://github.com/buluma/ansible-role-icingaweb2/issues/12)
 - Update buluma/todo-to-issue-action@v1.0.1 @buluma [\#9](https://github.com/buluma/ansible-role-icingaweb2/issues/9)
 - Update action [\#8](https://github.com/buluma/ansible-role-icingaweb2/issues/8)
 
